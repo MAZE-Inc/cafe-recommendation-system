@@ -1,4 +1,4 @@
-# The Big AI : A-MAZE 콘텐츠 기반 카페 추천 시스템
+# A-MAZE: Content-based Cafe Recommendation System
 Installation 진행 후, `sh run.bin` 실행
 
 ## Introduction
