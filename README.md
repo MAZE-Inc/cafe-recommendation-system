@@ -1,5 +1,9 @@
 # A-MAZE: Content-based Cafe Recommendation System
-Installation 진행 후, `sh run.bin` 실행
+## How To Run
+[Installation](#installation) 진행 후, 아래 명령어 실행
+```shell
+$ sh ./run.bin
+```
 
 ## Introduction
 ### Hardware Specification
