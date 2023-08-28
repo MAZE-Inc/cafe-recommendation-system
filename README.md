@@ -77,8 +77,29 @@ $ sudo apt-get install vim nano build-essential
     $ cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
     ```
 
-#### TODO : Anaconda, torch, 및 데이터 베이스 관련 패키지도 설치 코드도 넣기
+#### TODO : Anaconda, torch, nuitka 및 데이터 베이스 관련 패키지도 설치 코드도 넣기
 
 ## Method
+### A-MAZE의 콘텐츠 기반 추천 필터링 (Content-based Filtering in A-MAZE)
+![](./images/the_big_ai_architecture.png)
+사용자가 방문한 카페의 특징을 기반으로한 유사도 분석 결과 및 사용자의 위치를 고려해서 사용자 맞춤 카페 목록을 제공함
 
+#### 유사도 분석에 사용되는 카페의 특징
+1. 카페의 시그니처 메뉴
+2. 카페의 인기도, 좌석 점유율
+3. 카페 이미지
+4. 카페의 분위기
+    - 카페의 분위기는 아래와 같은 요소로 판단함
+        - 카페 방문객의 주요 행동 패턴
+        - 카페 방문객의 연령대 및 성비
+
+#### 알고리즘 (검토 후 플로우차트 추가 예정)
+1. 로그를 기준으로 카페 별 분석 시작 
+2. 분석 자료를 기반으로 카페 정보 임베딩 업데이트
+    - 간단한 Feature Extraction 알고리즘을 통해 카페의 대표 이미지 5장에 대한 특징을 추출
+    - 이미지 특징 및 시그니처 메뉴, 좌석 점유율, 그리고 카페의 분위기에 대한 정보를 One-Hot Encoding을 이용해 임베딩
+3. 사용자 별 최다 방문 카페 분석
+4. 최다 방문 카페의 임베딩과 유사한 카페 목록 찾기
+    - 유사도 검사는 코사인 유사도 및 KNN 이용
+5. 사용자 별 맞춤 카페 제공
 
