@@ -1,4 +1,6 @@
 # The Big AI : A-MAZE 콘텐츠 기반 카페 추천 시스템
+Installation 진행 후, `sh run.bin` 실행
+
 ## Introduction
 ### Hardware Specification
 | 품목 | 규격 |
