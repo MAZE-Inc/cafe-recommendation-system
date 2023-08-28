@@ -141,9 +141,11 @@ $ sudo pip3 install -r requirements.txt
 | --- | --- |
 | int | object|
 
-예시 데이터
+##### 예시 데이터
 | user_id | recommended_cafe | 
 | --- | --- |
 | 1 | `[{"cafe_id": 2,  "fitness": 82.7},  {"cafe_id": 5,  "fitness": 72.5,7}, {"cafe_id": 21,  "fitness": 62.1}]`|
 | 3 | `[{"cafe_id": 1,  "fitness": 92.8},  {"cafe_id": 18,  "fitness": 92.5,7}, {"cafe_id": 19,  "fitness": 75.4}]`|
+
+##### A-MAZE 앱 내 AI 진단 페이지
 
