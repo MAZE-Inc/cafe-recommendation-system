@@ -1,12 +1,11 @@
-# A-MAZE: Content-based Cafe Recommendation System
-## How To Run
-[Installation](#installation) 진행 후, 아래 명령어 실행
+# A-MAZE: 콘텐츠 기반 카페 추천 시스템
+## 실행 방법
+[소프트웨어 환경 설치](#소프트웨어-환경-설치) 진행 후, 아래 명령어를 실행한다.
 ```shell
 $ sh ./run.bin
 ```
 
-## Introduction
-### Hardware Specification
+## 하드웨어 사양
 | 품목 | 규격 |
 |------|------|
 |CPU|Intel CPU Core I9-10920X|
@@ -15,19 +14,19 @@ $ sh ./run.bin
 |SSD|SK Hynix Gold P31 M.2 NVMe (1TB)|
 |VGA|GFORCE RTX3080Ti D6X 12GB Ref X4|
 
-## Environment / Installation
+## 소프트웨어 환경
 Server : Ubuntu 20.04 x86_64  
 Database : MongoDB
 
-### Installation
-#### 개발에 필요한 기본 패키지 설치
+## 소프트웨어 환경 설치
+### 개발에 필요한 기본 패키지 설치
 ```shell
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget gcc make python3-pip
 
 ```
-#### 그래픽카드 드라이버 Installation
+### 그래픽카드 드라이버 설치
 1. GPU와 호환되는 ubuntu diriver 설치하기
     ```shell 
     $ ubuntu-drivers devices
@@ -46,7 +45,7 @@ $ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgd
     $ nvidia-smi
     ```
 
-#### CUDA Installation
+### CUDA 설치하기
 1. cuda toolkit 설치하기  
     ###### CUDA toolkit 12.0.0 /Linux / x86_64 / Ubuntu20.04 기준
     ```shell
@@ -57,12 +56,12 @@ $ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgd
     ```
     다른 환경에 대한 설치방법은 [해당 링크](https://developer.nvidia.com/cuda-12-0-0-download-archive) 참조
 
-#### CUDA 환경 설정
+### CUDA 환경 설정
 1. 아래 명령어로 설정파일 열기
     ```shell
     $ vim /etc/profile
     ```
-2. 아래와 같은 명령어 입력
+2. 아래와 같은 명령어 입력하기
     ```shell
     $ export PATH=/usr/local/cuda-12.0/bin${PATH:+:${PATH}}
     $export LD_LIBRARY_PATH=/usr/local/cuda-12.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
@@ -72,7 +71,7 @@ $ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgd
     ```shell
     $ source /etc/profile
     ```
-#### cuDNN Installation  
+#### cuDNN 설치하기  
 1. [해당링크](https://developer.nvidia.com/rdp/cudnn-archive) 에서 CUDA 버전 및 서버 환경과 맞는 파일 다운로드 
 2. 압축 풀고 설치하기
     ```shell
@@ -86,7 +85,7 @@ $ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgd
     $ cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
     ```
 
-#### Python 3.12 Installation
+### Python 3.12 설치하기
 ```shell
 $ tar -xvf Python-3.12.0a5.tar.xz
 $ cd Python-3.12.0a5
@@ -97,7 +96,7 @@ $ sudo apt-get install python3-pip
 ```
 
 
-#### Anaconda Installation 
+#### Anaconda 설치하기 
 1. [해당링크](https://repo.anaconda.com/archive/)에서 환경에 맞는 최신 버전 다운로드
     ```shell
     $ wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh
@@ -110,12 +109,12 @@ $ sudo apt-get install python3-pip
     $ source ~/.bashrc
     ```
 
-#### 기타 패키지 Installation
+### 기타 패키지 설치하기
 ```shell
 $ sudo pip3 install -r requirements.txt
 ```
 
-## Method
+## 콘텐츠 기반 카페 추천 시스템 
 ### A-MAZE의 콘텐츠 기반 추천 필터링 (Content-based Filtering in A-MAZE)
 ![](./images/the_big_ai_architecture.png)
 사용자가 방문한 카페의 특징을 기반으로한 유사도 분석 결과 및 사용자의 위치를 고려해서 사용자 맞춤 카페 목록을 제공함
