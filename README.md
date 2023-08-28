@@ -10,7 +10,8 @@
 |VGA|GFORCE RTX3080Ti D6X 12GB Ref X4|
 
 ## Environment / Installation
-Ubuntu 20.04 x86_64
+Server : Ubuntu 20.04 x86_64  
+Database : MongoDB
 
 ### Installation
 #### 개발에 필요한 기본 패키지 설치
@@ -104,9 +105,9 @@ $ sudo apt-get install python3-pip
     ```
 
 #### 기타 패키지 Installation
-    ```shell
-    $ sudo pip3 install -r requirements.txt
-    ```
+```shell
+$ sudo pip3 install -r requirements.txt
+```
 
 ## Method
 ### A-MAZE의 콘텐츠 기반 추천 필터링 (Content-based Filtering in A-MAZE)
@@ -131,4 +132,16 @@ $ sudo apt-get install python3-pip
 4. 최다 방문 카페의 임베딩과 유사한 카페 목록 찾기
     - 유사도 검사는 코사인 유사도 및 KNN 이용
 5. 사용자 별 맞춤 카페 제공
+
+#### 프로그램 수행 결과
+데이터 베이스에 사용자 별 카페 추천 목록이 저장됨
+| user_id | recommand_cafe_id | 
+| --- | --- |
+| int | object|
+
+예시 데이터
+| user_id | recommended_cafe | 
+| --- | --- |
+| 1 | `[{"cafe_id": 2,  "fitness": 82.7},  {"cafe_id": 5,  "fitness": 72.5,7}, {"cafe_id": 21,  "fitness": 62.1}]`|
+| 3 | `[{"cafe_id": 1,  "fitness": 92.8},  {"cafe_id": 18,  "fitness": 92.5,7}, {"cafe_id": 19,  "fitness": 75.4}]`|
 
