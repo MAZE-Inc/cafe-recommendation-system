@@ -10,15 +10,17 @@
 |VGA|GFORCE RTX3080Ti D6X 12GB Ref X4|
 
 ## Environment / Installation
-Ubuntu 20.04
+Ubuntu 20.04 x86_64
+
 ### Installation
 #### 개발에 필요한 기본 패키지 설치
 ```shell
 $ sudo apt-get update
 $ sudo apt-get upgrade
-$ sudo apt-get install vim nano build-essential
+$ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget gcc make python3-pip
+
 ```
-#### 그래픽카드 드라이버 설치하기
+#### 그래픽카드 드라이버 Installation
 1. GPU와 호환되는 ubuntu diriver 설치하기
     ```shell 
     $ ubuntu-drivers devices
@@ -37,7 +39,7 @@ $ sudo apt-get install vim nano build-essential
     $ nvidia-smi
     ```
 
-#### CUDA 설치하기
+#### CUDA Installation
 1. cuda toolkit 설치하기  
     ###### CUDA toolkit 12.0.0 /Linux / x86_64 / Ubuntu20.04 기준
     ```shell
@@ -63,7 +65,7 @@ $ sudo apt-get install vim nano build-essential
     ```shell
     $ source /etc/profile
     ```
-#### cuDNN 설치하기  
+#### cuDNN Installation  
 1. [해당링크](https://developer.nvidia.com/rdp/cudnn-archive) 에서 CUDA 버전 및 서버 환경과 맞는 파일 다운로드 
 2. 압축 풀고 설치하기
     ```shell
@@ -77,7 +79,34 @@ $ sudo apt-get install vim nano build-essential
     $ cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2
     ```
 
-#### TODO : Anaconda, torch, nuitka 및 데이터 베이스 관련 패키지도 설치 코드도 넣기
+#### Python 3.12 Installation
+```shell
+$ tar -xvf Python-3.12.0a5.tar.xz
+$ cd Python-3.12.0a5
+$ ./configure --enable-optimizations
+$ make -j 4
+$ sudo make altinstall
+$ sudo apt-get install python3-pip
+```
+
+
+#### Anaconda Installation 
+1. [해당링크](https://repo.anaconda.com/archive/)에서 환경에 맞는 최신 버전 다운로드
+    ```shell
+    $ wget https://repo.anaconda.com/archive/Anaconda3-2023.07-2-Linux-x86_64.sh
+    $ sudo bash Anaconda3-2021.05-Linux-x86_64.sh
+    ```
+2. Anaconda 설정하기
+    ```shell
+    $ source /usr/anaconda3/bin/activate 
+    $ conda init
+    $ source ~/.bashrc
+    ```
+
+#### 기타 패키지 Installation
+    ```shell
+    $ sudo pip3 install -r requirements.txt
+    ```
 
 ## Method
 ### A-MAZE의 콘텐츠 기반 추천 필터링 (Content-based Filtering in A-MAZE)
