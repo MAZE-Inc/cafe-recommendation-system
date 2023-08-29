@@ -1,8 +1,17 @@
 # A-MAZE: 콘텐츠 기반 카페 추천 시스템
 ## 실행 방법
+방법 1.   
 [소프트웨어 환경 설치](#소프트웨어-환경-설치) 진행 후, 아래 명령어를 실행한다.
 ```shell
 $ sh ./run.bin
+```
+방법 2.   
+bin 파일의 실행 권한을 부여한 후 명령어를 실행한다.
+```shell
+# 실행 권한 부여.
+$ chmod +x ./run.bin
+# 명령어 실행
+$ ./run.bin
 ```
 
 ## 하드웨어 사양
@@ -141,7 +150,7 @@ $ sudo pip3 install -r requirements.txt
 
 #### 프로그램 수행 결과
 데이터 베이스에 사용자 별 카페 추천 목록이 저장된다.
-| user_id | recommand_cafe_id | 
+| user_id | recommended_cafe_id | 
 | --- | --- |
 | int | object |
 
