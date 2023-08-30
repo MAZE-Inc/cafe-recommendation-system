@@ -161,4 +161,5 @@ $ sudo pip3 install -r requirements.txt
 | 3 | `[{"cafe_id": 1,  "fitness": 92.8},  {"cafe_id": 18,  "fitness": 92.5,7}, {"cafe_id": 19,  "fitness": 75.4}]`|
 
 ##### A-MAZE 앱 내 AI 진단 페이지
-
+![](./images/A_MAZE_MyPage.png)
+자사의 타 모델인 고객/카페 패턴 분석 AI로 부터 얻은 통계 결과 및 추천 시스템을 활용하여 사용자에게 AI 진단 결과를 제공합니다.
