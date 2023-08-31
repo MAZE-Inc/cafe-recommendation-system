@@ -135,9 +135,10 @@ $ sudo pip3 install -r requirements.txt
     - 카페의 분위기는 아래와 같은 요소로 판단함
         - 카페 방문객의 주요 행동 패턴
         - 카페 방문객의 연령대 및 성비
-
-### The BIG AI 의 데이터 흐름도와 서비스 아키텍처
+### A MAZE 서비스 아키텍처
 ![](./images/amaze.png)
+### The BIG AI 데이터 흐름도
+![](./images/the_big_ai_data_flow_chart.png)
 
 #### 알고리즘
 1. 데이터베이스에 쌓인 로그를 기준으로 카페 별 분석 시작한다.
