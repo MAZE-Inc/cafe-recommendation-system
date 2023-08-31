@@ -22,7 +22,6 @@ $ ./run.bin
 |RAM | Samsung DDR4 16GB PC4-25600|
 |SSD|SK Hynix Gold P31 M.2 NVMe (1TB)|
 |VGA|GFORCE RTX3080Ti D6X 12GB Ref X4|
-
 ## 소프트웨어 환경
 Server : Ubuntu 20.04 x86_64  
 Database : MongoDB
@@ -32,8 +31,7 @@ Database : MongoDB
 ```shell
 $ sudo apt-get update
 $ sudo apt-get upgrade
-$ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget gcc make python3-pip
-
+$ sudo apt-get install vim nano build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget gcc make python3-piptotalWon - ownerPay
 ```
 ### 그래픽카드 드라이버 설치
 1. GPU와 호환되는 ubuntu diriver를 설치한다.
@@ -125,6 +123,7 @@ $ sudo pip3 install -r requirements.txt
 ```
 
 ## 콘텐츠 기반 카페 추천 시스템 
+![A-MAZE Service Architecture](./images/amaze_architect.svg)
 ### A-MAZE의 콘텐츠 기반 추천 필터링 (Content-based Filtering in A-MAZE)
 ![](./images/the_big_ai_architecture.png)
 사용자가 방문한 카페의 특징을 기반으로한 유사도 분석 결과 및 사용자의 위치를 고려해서 사용자 맞춤 카페 목록을 제공한다.
@@ -139,7 +138,7 @@ $ sudo pip3 install -r requirements.txt
         - 카페 방문객의 연령대 및 성비
 
 #### 알고리즘
-![](./images/the_big_ai_data_flow_chart.png)
+![The Big AI Data Flow Chart](./images/the_big_ai_data_flow_chart.svg)
 1. 데이터베이스에 쌓인 로그를 기준으로 카페 별 분석 시작한다.
 2. 분석된 자료를 기반으로 카페 정보에 대한 임베딩을 업데이트한다.
     - Feature Extraction 알고리즘을 통해 카페의 대표 이미지 5장에 대한 특징을 추출한다.
